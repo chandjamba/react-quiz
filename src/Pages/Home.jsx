@@ -16,6 +16,7 @@ export default function Home() {
     const res = await fetch(url);
     const data = await res.json();
     console.log(data.results);
+    
     setCurrentQuestion(data?.results?.[0]?.question);
     const options = [
       ...data?.results?.[0]?.incorrect_answers,
